@@ -2,6 +2,8 @@
 
 This repository has a basic SpringBoot service, used for training purpose.
 
+[![CI](https://github.com/GitHubWorkshop2021/GithubTrainingJava/actions/workflows/main.yml/badge.svg)](https://github.com/GitHubWorkshop2021/GithubTrainingJava/actions/workflows/main.yml)
+
 ## Give a Star! :star:
 
 If you like and enjoy the workshop, please give it a star. Thanks!
