@@ -25,3 +25,4 @@ hs_err_pid*
 
 #In spring boot projects, this folder and their files must exist
  !/.mvn/*
+ !/.mvn/*.jar
