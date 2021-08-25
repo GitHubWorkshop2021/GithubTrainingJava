@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.restservice.GreetingControllerTests" time="6.013" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.restservice.GreetingControllerTests" time="14.524" tests="2" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="16"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -10,7 +10,7 @@
     <property name="java.vm.vendor" value="Private Build"/>
     <property name="path.separator" value=":"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="os.version" value="4.4.0-19041-Microsoft"/>
+    <property name="os.version" value="5.10.16.3-microsoft-standard-WSL2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vendor.url" value="Unknown"/>
@@ -20,7 +20,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="localRepository" value="/home/josecorral/.m2/repository"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-16-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/mnt/c/repos/GithubTrainingJava/target/surefire/surefirebooter2344866020774057937.jar /mnt/c/repos/GithubTrainingJava/target/surefire 2021-07-13T14-42-57_867-jvmRun1 surefire3235498707722556569tmp surefire_013768067634946679612tmp"/>
+    <property name="sun.java.command" value="/mnt/c/repos/GithubTrainingJava/target/surefire/surefirebooter14639139225815618515.jar /mnt/c/repos/GithubTrainingJava/target/surefire 2021-08-25T15-30-43_604-jvmRun1 surefire17576295889868273990tmp surefire_01810995364595781070tmp"/>
     <property name="java.vendor.url.bug" value="Unknown"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="jdk.debug" value="release"/>
@@ -47,8 +47,121 @@
     <property name="java.vm.version" value="16.0.1+9-Ubuntu-120.04"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="60.0"/>
-    <property name="surefire.real.class.path" value="/mnt/c/repos/GithubTrainingJava/target/surefire/surefirebooter2344866020774057937.jar"/>
+    <property name="surefire.real.class.path" value="/mnt/c/repos/GithubTrainingJava/target/surefire/surefirebooter14639139225815618515.jar"/>
   </properties>
-  <testcase name="noParamGreetingShouldReturnDefaultMessage" classname="com.example.restservice.GreetingControllerTests" time="0.978"/>
-  <testcase name="paramGreetingShouldReturnTailoredMessage" classname="com.example.restservice.GreetingControllerTests" time="0.076"/>
+  <testcase name="noParamGreetingShouldReturnDefaultMessage" classname="com.example.restservice.GreetingControllerTests" time="3.058">
+    <failure message="JSON path &quot;$.content&quot; expected:&lt;Hello, World!&gt; but was:&lt;Hello, People!&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: JSON path "$.content" expected:<Hello, World!> but was:<Hello, People!>
+	at com.example.restservice.GreetingControllerTests.noParamGreetingShouldReturnDefaultMessage(GreetingControllerTests.java:41)
+]]></failure>
+    <system-out><![CDATA[15:30:46.315 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:30:46.409 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:30:46.617 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.restservice.GreetingControllerTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:30:46.720 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.restservice.GreetingControllerTests], using SpringBootContextLoader
+15:30:46.774 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.restservice.GreetingControllerTests]: class path resource [com/example/restservice/GreetingControllerTests-context.xml] does not exist
+15:30:46.787 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.restservice.GreetingControllerTests]: class path resource [com/example/restservice/GreetingControllerTestsContext.groovy] does not exist
+15:30:46.787 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.restservice.GreetingControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:30:46.797 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.restservice.GreetingControllerTests]: GreetingControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:30:47.048 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.restservice.GreetingControllerTests]
+15:30:47.435 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/mnt/c/repos/GithubTrainingJava/target/classes/com/example/restservice/RestServiceApplication.class]
+15:30:47.454 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.restservice.RestServiceApplication for test class com.example.restservice.GreetingControllerTests
+15:30:48.084 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.restservice.GreetingControllerTests]: using defaults.
+15:30:48.091 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+15:30:48.217 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+15:30:48.224 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+15:30:48.225 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6e15fe2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@68f1b17f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1722011b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@57ad2aa7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5b3f61ff, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3e2059ae, org.springframework.test.context.event.EventPublishingTestExecutionListener@398dada8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7cb502c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@275bf9b3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1b8a29df, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4fbe37eb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@12a94400, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6a47b187]
+15:30:48.265 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@27adc16e testClass = GreetingControllerTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@b83a9be testClass = GreetingControllerTests, locations = '{}', classes = '{class com.example.restservice.RestServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@2609b277 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@157853da, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3cc1435c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@f381794, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@37858383, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6a370f4, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4bec1f0c], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+15:30:48.474 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-08-25 15:30:49.659  INFO 10335 --- [           main] c.e.restservice.GreetingControllerTests  : Starting GreetingControllerTests using Java 16.0.1 on MININT-O27Q03K with PID 10335 (started by josecorral in /mnt/c/repos/GithubTrainingJava)
+2021-08-25 15:30:49.669  INFO 10335 --- [           main] c.e.restservice.GreetingControllerTests  : No active profile set, falling back to default profiles: default
+2021-08-25 15:30:55.279  INFO 10335 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-25 15:30:57.200  INFO 10335 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-08-25 15:30:57.202  INFO 10335 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-08-25 15:30:57.207  INFO 10335 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2021-08-25 15:30:57.278  INFO 10335 --- [           main] c.e.restservice.GreetingControllerTests  : Started GreetingControllerTests in 8.769 seconds (JVM running for 13.187)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /greeting
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.restservice.GreetingController
+           Method = com.example.restservice.GreetingController#greeting(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":1,"content":"Hello, People!"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /greeting
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.restservice.GreetingController
+           Method = com.example.restservice.GreetingController#greeting(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":1,"content":"Hello, People!"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
+  <testcase name="paramGreetingShouldReturnTailoredMessage" classname="com.example.restservice.GreetingControllerTests" time="0.044"/>
 </testsuite>
