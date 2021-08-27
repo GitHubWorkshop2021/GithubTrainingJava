@@ -3,6 +3,7 @@
 This repository has a basic SpringBoot service, used for training purpose.
 
 [![CI](https://github.com/GitHubWorkshop2021/GithubTrainingJava/actions/workflows/main.yml/badge.svg)](https://github.com/GitHubWorkshop2021/GithubTrainingJava/actions/workflows/main.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=GitHubWorkshop2021_GithubTrainingJava&metric=alert_status)](https://sonarcloud.io/dashboard?id=GitHubWorkshop2021_GithubTrainingJava)
 
 ## Give a Star! :star:
 
