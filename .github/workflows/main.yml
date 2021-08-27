@@ -52,5 +52,5 @@ jobs:
         run: ./mvnw -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=GitHubWorkshop2021_GithubTrainingJava
         
       # Runs a set of commands using the runners shell
-      - name: Run MVN with test
-        run: ./mvnw install
+      #- name: Run MVN with test
+      #  run: ./mvnw install
