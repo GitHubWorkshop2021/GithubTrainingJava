@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class RestServiceApplication {
 
     public static void main(String[] args) {
+    	System.out.println("El betis es el mejor");
+
+		System.out.println("soy un tio conflictivo de git");
         SpringApplication.run(RestServiceApplication.class, args);
     }
 
