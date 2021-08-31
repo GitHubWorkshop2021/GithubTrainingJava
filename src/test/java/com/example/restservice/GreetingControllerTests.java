@@ -30,23 +30,32 @@ import org.springframework.test.web.servlet.MockMvc;
 @SpringBootTest
 @AutoConfigureMockMvc
 public class GreetingControllerTests {
+//	System.out.println("soy un tio conflictivo de git");
 
 	@Autowired
 	private MockMvc mockMvc;
+//	System.out.println("El betis es el mejor");
 
 	@Test
 	public void noParamGreetingShouldReturnDefaultMessage() throws Exception {
+		System.out.println("soy un tio conflictivo de git");
 
 		this.mockMvc.perform(get("/greeting")).andDo(print()).andExpect(status().isOk())
 				.andExpect(jsonPath("$.content").value("Hello, World!"));
+		System.out.println("El betis es el mejor");
+
 	}
 
 	@Test
 	public void paramGreetingShouldReturnTailoredMessage() throws Exception {
+		System.out.println("soy un tio conflictivo de git");
 
 		this.mockMvc.perform(get("/greeting").param("name", "Spring Community"))
 				.andDo(print()).andExpect(status().isOk())
 				.andExpect(jsonPath("$.content").value("Hello, Spring Community!"));
+		
+		System.out.println("El betis es el mejor");
+
 	}
 
 }
