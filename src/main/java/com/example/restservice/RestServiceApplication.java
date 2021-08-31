@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class RestServiceApplication {
 
-	//TODO @marcoscga comentario jodón
+	//TODO @marcoscga comentario jodón que ha cambiado en segundo commit
     public static void main(String[] args) {
     	System.out.println("Print de consola");
         SpringApplication.run(RestServiceApplication.class, args);
