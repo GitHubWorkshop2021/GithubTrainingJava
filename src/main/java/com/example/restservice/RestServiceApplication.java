@@ -11,4 +11,8 @@ public class RestServiceApplication {
         int i = 0;
     }
 
+    public void noseusa(int i) {
+    	
+    }
+
 }
